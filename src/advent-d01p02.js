@@ -1,11 +1,4 @@
-const cbfs = require('fs');
-const util = require('util');
-
-const fs = {
-  readdir: util.promisify(cbfs.readdir),
-  readFile: util.promisify(cbfs.readFile),
-  writeFile: util.promisify(cbfs.writeFile),
-};
+const fs = require("./modules/fs");
 
 function fuelNeeds(mass) {
   const need = Math.floor(mass / 3) - 2;

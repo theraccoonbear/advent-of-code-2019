@@ -1,12 +1,4 @@
-const cbfs = require('fs');
-const util = require('util');
-
-const fs = {
-  readdir: util.promisify(cbfs.readdir),
-  readFile: util.promisify(cbfs.readFile),
-  writeFile: util.promisify(cbfs.writeFile),
-};
-
+const fs = require("./fs");
 async function main() {
   const raw = await fs.readFile('module_weights.json', { encoding: 'utf8' });
   const data = JSON.parse(raw);

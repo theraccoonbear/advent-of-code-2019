@@ -1,6 +1,6 @@
-const fs = require("./fs");
+const fs = require("./modules/fs");
 async function main() {
-  const raw = await fs.readFile('module_weights.json', { encoding: 'utf8' });
+  const raw = await fs.readFile('./data/module_weights.json', { encoding: 'utf8' });
   const data = JSON.parse(raw);
   console.log("Module Weights:", data);
   const fuel_needed = data

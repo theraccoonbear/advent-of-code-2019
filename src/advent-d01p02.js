@@ -6,7 +6,7 @@ function fuelNeeds(mass) {
 }
 
 async function main() {
-  const raw = await fs.readFile('module_weights.json', { encoding: 'utf8' });
+  const raw = await fs.readFile('./data/module_weights.json', { encoding: 'utf8' });
   const module_weights = JSON.parse(raw);
   console.log("Module Weights:", module_weights);
   const fuel_needed = module_weights
